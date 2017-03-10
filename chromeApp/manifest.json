@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "拾豆瓣",
+  "description": "load same information from movie.douban",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "favicon_19.png",
+    "default_popup": "popup.html",
+    "default_title": "click here for get more information =_="
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "contextMenus",
+    "https://api.douban.com/"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons":{
+    "16":"favicon_19.png",
+    "48": "favicon_48.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://www.dytt8.net/index.htm","http://www.poxiao.com/","http://www.6vhao.com/"],
+    "js": ["jQuery1.8.2.js", "info.js"],
+    "run_at":"document_end"
+  }]
+}

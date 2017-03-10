@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 14px;
+
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 20px;
+        background: #f0f3f5;
+        color:#27a
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status">
+      <p>此插件提供在电影网站中获取豆瓣电影信息的功能</p>
+    </div>
+  </body>
+</html>
+
